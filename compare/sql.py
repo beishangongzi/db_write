@@ -1,0 +1,1 @@
+is_interects = """select count(*) from {} where st_intersects(geometry,  st_geomfromgeojson({})) is true;"""

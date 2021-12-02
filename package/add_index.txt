@@ -1,0 +1,8 @@
+test_building_beijing_2000000-----geometry-----geometry_index_on_test_building_beijing_2000000-----0.8757021427154541
+test_building_beijing_4000000-----geometry-----geometry_index_on_test_building_beijing_4000000-----0.7704062461853027
+test_building_beijing_6000000-----geometry-----geometry_index_on_test_building_beijing_6000000-----0.708991527557373
+test_building_beijing_8000000-----geometry-----geometry_index_on_test_building_beijing_8000000-----0.8167760372161865
+test_building_beijing_2000000-----geometry-----geometry_index_on_test_building_beijing_2000000-----0.8881363868713379
+test_building_beijing_4000000-----geometry-----geometry_index_on_test_building_beijing_4000000-----0.7536735534667969
+test_building_beijing_6000000-----geometry-----geometry_index_on_test_building_beijing_6000000-----0.763845682144165
+test_building_beijing_8000000-----geometry-----geometry_index_on_test_building_beijing_8000000-----0.7971570491790771

@@ -1,0 +1,12 @@
+test_building_beijing_6000000-----city---text-----'index_'city-----6.025223255157471
+test_building_beijing_6000000-----geometry---2dsphere-----'index_'geometry-----64.51054406166077
+test_building_beijing_6000000-----city---text-----'index_'city-----0.3847489356994629
+test_building_beijing_6000000-----geometry---2dsphere-----'index_'geometry-----0.10230469703674316
+test_building_beijing_6000000-----city---text-----'index_'city-----9.094516038894653
+test_building_beijing_6000000-----geometry---2dsphere-----'index_'geometry-----67.07333540916443
+test_building_beijing_20000000-----city---text-----'index_'city-----343.1738998889923
+test_building_beijing_20000000-----geometry---2dsphere-----'index_'geometry-----1174.2230298519135
+test_building_beijing_40000000-----city---text-----'index_'city-----437.56330013275146
+test_building_beijing_40000000-----geometry---2dsphere-----'index_'geometry-----1430.8946959972382
+test_building_beijing_80000000-----city---text-----'index_'city-----340.268191576004
+test_building_beijing_80000000-----geometry---2dsphere-----'index_'geometry-----2203.790231704712

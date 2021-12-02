@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "5_1_chaoyang",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 2 }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 116.445413126906359, 39.884027662152327 ], [ 116.629987623507162, 39.889085765606865 ], [ 116.616144536262127, 39.81368138531812 ], [ 116.438161985968478, 39.809630485139529 ], [ 116.445413126906359, 39.884027662152327 ] ] ] ] } }
+]
+}

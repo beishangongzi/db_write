@@ -1,0 +1,5 @@
+test_building_beijing_6000000-----geometry-----geometry_index_on_test_building_beijing_6000000-----75.17086505889893
+test_building_beijing_6000000-----geometry-----geometry_index_on_test_building_beijing_6000000-----74.77992343902588
+test_building_beijing_20000000-----geometry-----geometry_index_on_test_building_beijing_20000000-----625.0673234462738
+test_building_beijing_40000000-----geometry-----geometry_index_on_test_building_beijing_40000000-----2016.1921169757843
+test_building_beijing_80000000-----geometry-----geometry_index_on_test_building_beijing_80000000-----4057.5950894355774
