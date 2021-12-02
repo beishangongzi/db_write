@@ -14,9 +14,7 @@ from data import process
 @cal_time("mongo_query_test.txt")
 def query(cursor, table_name, county_adcode, county_name, geojson, proportion):
     s = {
-        "properties.city": {
-            "$eq": "",
-        },
+        "properties.city": "",
         "geometry": {
             "$geoIntersects": {
                 "$geometry": "geometry_name"
@@ -25,7 +23,7 @@ def query(cursor, table_name, county_adcode, county_name, geojson, proportion):
     }
     geojson = json.dumps(geojson)
     s["geometry"]["$geoIntersects"].update({"$geometry": geojson})
-    s["properties.city"].update({"$eq": county_name})
+    s["properties.city"] = county_name
     _sql = s
     print(_sql)
     cursor.find(_sql)
