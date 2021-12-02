@@ -27,6 +27,7 @@ def query(cursor, table_name, county_adcode, county_name, geojson, proportion):
     s["geometry"]["$geoIntersects"].update({"$geometry": geojson})
     s["properties.city"].update({"$eq": county_name})
     _sql = s
+    print(_sql)
     cursor.find(_sql)
     num = cursor.count_documents({})
     res_str = f"""{county_name}-----{county_adcode}-----{table_name}-----{num.__str__()}-----{proportion}"""
@@ -40,7 +41,7 @@ def query_postgresql(file, file_type, tables_nums):
     """
 
     datas = process(file, file_type)
-    myclient = pymongo.MongoClient(f"mongodb://192.168.23.10:27017/")
+    myclient = pymongo.MongoClient(f"mongodb://127.0.01:27017/")
     mydb = myclient["test_beijing"]
     # tables_nums = [6000000, 20000000, 40000000, 80000000]
 
@@ -83,4 +84,5 @@ def start():
 
 
 if __name__ == '__main__':
-    test_query_postgresql()
+    # test_query_postgresql()
+    start()
