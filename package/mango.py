@@ -14,20 +14,20 @@ from data import process
 @cal_time("mongo_query_test.txt")
 def query(cursor, table_name, county_adcode, county_name, geojson, proportion):
     s = {
-        "properties.city": "",
+        "properties.city": {
+            "$eq": "",
+        },
         "geometry": {
             "$geoIntersects": {
                 "$geometry": "geometry_name"
             }
         }
     }
-    geojson = json.dumps(geojson)
     s["geometry"]["$geoIntersects"].update({"$geometry": geojson})
-    s["properties.city"] = county_name
+    s["properties.city"].update({"$eq": county_name})
     _sql = s
-    print(_sql)
-    cursor.find(_sql)
-    num = cursor.count_documents({})
+    num = cursor.count_documents(_sql)
+    print(num)
     res_str = f"""{county_name}-----{county_adcode}-----{table_name}-----{num.__str__()}-----{proportion}"""
     return res_str
 
@@ -45,9 +45,12 @@ def query_postgresql(file, file_type, tables_nums):
 
     i = 1
     for data in datas:
+        print("-----------")
         print(i)
+
         i += 1
         for tables_num in tables_nums:
+            print(data[0], data[1])
             tables = f"test_building_beijing_{tables_num}"
             cursor = mydb[tables]
             data.insert(0, tables)
@@ -67,8 +70,8 @@ def test_query_postgresql():
 
 
 def start():
-    # tables_nums = [6000000, 20000000, 40000000, 80000000]
-    tables_nums = [6000000]
+    tables_nums = [6000000, 20000000, 40000000, 80000000]
+    # tables_nums = [6000000]
     # tables_nums = [2000000, 4000000, 6000000, 8000000]
     file1 = "./data/5_1_朝阳区.geojson"
     file2 = "./data/10_1_朝阳区.geojson"
@@ -81,6 +84,15 @@ def start():
     query_postgresql(file, 1, tables_nums)
 
 
+def test_query():
+    tables_nums = [6000000]
+    file1 = "./data/test_data/6_1_海淀区.geojson"
+    # file1 = "./data/test_data/10_1_朝阳区.geojson"
+    query_postgresql(file1, 2, tables_nums)
+
+
 if __name__ == '__main__':
     # test_query_postgresql()
     start()
+    # test_query()
+
